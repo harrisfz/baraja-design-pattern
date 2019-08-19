@@ -1,7 +1,7 @@
 package io.sago.baraja.design.pattern.strategic.character;
 
-import io.sago.hfz.baraja.pattern.strategic.strategic.ShoutName;
-import io.sago.hfz.baraja.pattern.strategic.strategic.WeaponKnife;
+import io.sago.baraja.design.pattern.strategic.ShoutName;
+import io.sago.baraja.design.pattern.strategic.WeaponKnife;
 
 /**
  * @author Harris Febryantony Z (harris.febryantony@dana.id)

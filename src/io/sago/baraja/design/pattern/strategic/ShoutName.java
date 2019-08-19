@@ -1,10 +1,6 @@
 package io.sago.baraja.design.pattern.strategic;
 
-import android.util.Log;
-
-import io.sago.hfz.baraja.pattern.strategic.strategic.character.Character;
-
-import static io.sago.hfz.baraja.pattern.strategic.MainActivity.TAG;
+import io.sago.baraja.design.pattern.strategic.character.Character;
 
 /**
  * @author Harris Febryantony Z (harris.febryantony@dana.id)

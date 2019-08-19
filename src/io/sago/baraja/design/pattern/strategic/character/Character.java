@@ -1,12 +1,7 @@
 package io.sago.baraja.design.pattern.strategic.character;
 
-import android.util.Log;
-
-import io.sago.hfz.baraja.pattern.strategic.MainActivity;
-import io.sago.hfz.baraja.pattern.strategic.strategic.ShoutBehavior;
-import io.sago.hfz.baraja.pattern.strategic.strategic.WeaponBehavior;
-
-import static io.sago.hfz.baraja.pattern.strategic.MainActivity.TAG;
+import io.sago.baraja.design.pattern.strategic.ShoutBehavior;
+import io.sago.baraja.design.pattern.strategic.WeaponBehavior;
 
 /**
  * @author Harris Febryantony Z (harris.febryantony@dana.id)
@@ -16,11 +11,11 @@ public class Character {
 
     private final String name;
 
-    protected WeaponBehavior weaponBehavior;
+    WeaponBehavior weaponBehavior;
 
-    protected ShoutBehavior shoutBehavior;
+    ShoutBehavior shoutBehavior;
 
-    public Character(String name) {
+    Character(String name) {
         this.name = name;
     }
 
@@ -32,7 +27,7 @@ public class Character {
         if (shoutBehavior != null) {
             shoutBehavior.shout();
         }else{
-            Log.d(TAG, "muted.......");
+            System.out.println("muted.......");
         }
     }
 
@@ -40,7 +35,7 @@ public class Character {
         if (weaponBehavior != null) {
             weaponBehavior.useWeapon();
         }else{
-            Log.d(TAG, "fight: Use Barehand");
+            System.out.println("fight: Use Barehand");
         }
     }
 
@@ -50,7 +45,7 @@ public class Character {
 
     public void setWeaponBehavior(
         WeaponBehavior weaponBehavior) {
-        Log.d(TAG, "setWeaponBehavior: change weapon");
+        System.out.println("setWeaponBehavior: change weapon");
         this.weaponBehavior = weaponBehavior;
     }
 }
