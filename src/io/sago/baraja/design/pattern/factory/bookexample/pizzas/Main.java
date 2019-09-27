@@ -1,5 +1,9 @@
 package io.sago.baraja.design.pattern.factory.bookexample.pizzas;
 
+import io.sago.baraja.design.pattern.factory.bookexample.pizzas.pizza.Pizza;
+import io.sago.baraja.design.pattern.factory.bookexample.pizzas.pizza.SimplePizzaFactory;
+import io.sago.baraja.design.pattern.factory.bookexample.pizzas.store.PizzaStore;
+
 public class Main {
 
     public static void main(String[] args) {
