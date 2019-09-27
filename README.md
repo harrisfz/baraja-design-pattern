@@ -9,4 +9,4 @@ Learning purpose repository, from **Head First Design Pattern** Book mostly and 
 	- [The Factory Pattern](https://github.com/harrisfz/baraja-design-pattern/tree/master/src/io/sago/baraja/design/pattern/factory/bookexample)
 
 
-- Object Oriented
+- Object Oriented Concept
