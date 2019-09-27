@@ -14,8 +14,8 @@ public class Main {
         System.out.println();
 
         System.out.println("Creating Decorated Circle and rectangle");
-        Shape decoratedCircle1 = new LineColorDecorator(new FillColorDecorator(new LineThicknessDecorator(
-                new LineStyleDecorator(circle, "dotted"), 2), "red"), "white");
+        Shape decoratedCircle1 = new LineColorDecorator(new LineColorDecorator(new FillColorDecorator(new LineThicknessDecorator(
+                new LineStyleDecorator(circle, "dotted"), 2), "red"), "white"), "green");
         decoratedCircle1.draw();
         System.out.println();
 
