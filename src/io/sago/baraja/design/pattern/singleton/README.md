@@ -25,3 +25,16 @@ How do we  ensure  that a class has only  one  instance and that the instance is
 * Common
 * Thread Save
 * Double Check Locking
+
+
+## Can we improve multithreading?
+> Do nothing if the performance of getInstance() isn’t critical to
+your application
+
+> Move to an eagerly created instance rather than a lazily
+created one
+
+> Use “double-checked locking” to reduce the use of
+synchronization in getInstance()
+
+**Double-checked locking doesn’t work in Java 1.4 or earlier!**
