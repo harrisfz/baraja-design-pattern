@@ -26,69 +26,74 @@ Java EE (Java Enterprise Edition)
 
 Java EE is a set of specifications and the respective implementations are all built using Java SE base packages which happen to already contain everything required for any application. For example, for a web application, here is a Java SE Web Server and a Java SE Database.
 
+
+
 Java 5
 
--   Enhanced for Loop Simpler. Don't need define start to end
 
+- Enhanced for Loop
+Simpler. Don't need define start to end
+```java
 String[] counts = { "one", "two", "three" };
 for (String str : counts) {
   System.out.println(str);
 }
-
--   Autoboxing/Unboxing Autoboxing : convert primitive type into wrapper object. Can put primitive type values into collections.
+```
+- Autoboxing/Unboxing
+Autoboxing : convert primitive type into wrapper object.
+Can put primitive type values into collections.
 
 example:
-
+```java
 List<Integer> li = new ArrayList<Integer>();
 for(int i=0;i < 20; i++){
     li.add(i);
 }
-
+```
 Unboxing : convert wrapper type into primitive type.
 
-example
 
+example
 ```
 List<Double> ld = new ArrayList<Double>();
 ld.add(3.14);
 
 double pi = ld.get(0);
-
 ```
-
--   Variable Length Argument List Can use multi parameters with same type
-
+- Variable Length Argument List
+Can use multi parameters with same type
+```java
 exampleVariableLengthArgumentList("1");
 exampleVariableLengthArgumentList("1","2");
 exampleVariableLengthArgumentList("1","2","3");
-
+```
+```java
 private void exampleVariableLengthArgumentList(String... parameters) {
   for (String str : parameters)
     System.out.println("Paramters:-" + str);
   }
   System.out.println("");
 }
-
--   Static import Import static class
-
+```
+- Static import
+Import static class
+```java
 import static java.lang.Math.abs;
 
 private void exampleStaticImport() {
   System.out.println(abs(-100));
 }
+```
 
 Java 6
 
--   Scripting Language Support
+- Scripting Language Support
 
 ```
 var aJavaString = new String('A Test String');
 var length = aJavaString.substring(7, 13);
-
 ```
-
--   Enhanched SQL Execption
-
+- Enhanched SQL Execption
 ```
 try{
 
@@ -101,21 +106,20 @@ try{
 
     }
 }
-
 ```
 
 Java 7
-
--   Diamond Syntax Before
-
+- Diamond Syntax
+Before
+```java
 Map<String, List<Trade>> trades = new TreeMap<String, List<Trade>> ();
-
+```
 After
-
+```java
 Map<String, List<Trade>> trades = new TreeMap <> ();
-
--   Strings in switch Statement
-
+```
+- Strings in switch Statement
+```java
 String status = "b";
 
 switch(status) {
@@ -128,38 +132,40 @@ case "b":
 default:
   break;
 }
-
--   Numeric literals with underscores
-
+```
+- Numeric literals with underscores
+```java
 int thousand =  1_000;
-
--   Improved exception handling
-
+```
+- Improved exception handling
+```java
 try{
       methodThatThrowsThreeExceptions();
 } catch(ExceptionOne | ExceptionTwo | ExceptionThree e) {
       // log and deal with all Exceptions
 }
+```
 
 Java 8
 
--   Lambda Expressions Before
-
+- Lambda Expressions
+Before
+```java
 Runnable r = new Runnable(){
     @Override
     public void run() {
       System.out.println("My Runnable");
     }
  };
-
+```
 After
-
+```java
 Runnable r1 = () -> {
   System.out.println("My Runnable");
 };
-
--   Stream
-
+```
+- Stream
+```java
 List<Integer> myList = new ArrayList<>();
 for(int i=0; i<100; i++) myList.add(i);
 
@@ -176,9 +182,8 @@ highNums.forEach(p -> System.out.println("High Nums parallel="+p));
 
 Stream<Integer> highNumsSeq = sequentialStream.filter(p -> p > 90);
 highNumsSeq.forEach(p -> System.out.println("High Nums sequential="+p));
-
+```
 Output:
-
 ```
 High Nums parallel=93
 High Nums parallel=91
@@ -198,15 +203,12 @@ High Nums sequential=96
 High Nums sequential=97
 High Nums sequential=98
 High Nums sequential=99
-
 ```
-
--   Method Reference
+- Method Reference
 
 Method reference is used to refer method of functional interface. It is compact and easy form of lambda expression. Each time when you are using lambda expression to just referring a method, you can replace your lambda expression with method reference.
 
 a. Reference to a static method
-
 ```
 interface Sayable{  
     void say();  
@@ -222,18 +224,13 @@ public class MethodReference {
         sayable.say();  
     }  
 }  
-
 ```
-
 Output:
-
 ```
 Hello, this is static method.
-
 ```
 
 b. Reference to instance method
-
 ```
 interface Sayable{  
     void say();  
@@ -255,19 +252,14 @@ public class InstanceMethodReference {
         sayable2.say();  
     }  
 } 
-
 ```
-
 Output:
-
 ```
 Hello, this is non-static method.
 Hello, this is non-static method.
-
 ```
 
 c. Reference to a constructor
-
 ```
 interface Messageable{  
     Message getMessage(String msg);  
@@ -283,31 +275,23 @@ public class ConstructorReference {
         hello.getMessage("Hello");  
     }  
 }  
-
 ```
-
 Output:
-
 ```
 Hello
-
 ```
 
 Java 9
-
--   Factory method for immutable list,map and set Make all immutable fields final. Value can be assigned only once.
-
+- Factory method for immutable list,map and set
+Make all immutable fields final. Value can be assigned only once.
 ```
 List imutableList = List.of("one","two","three");
-
 ```
 
-# [](https://github.com/fahrizal89/java-development#generics)Generics
+# Generics
+- The idea is to allow type (Integer, String, … etc and user defined types) to be a parameter to methods, classes and interfaces.
 
--   The idea is to allow type (Integer, String, … etc and user defined types) to be a parameter to methods, classes and interfaces.
-
-1.  Generic Class
-
+1. Generic Class
 ```
 class Test<T> { 
     // An object of type T is declared 
@@ -321,9 +305,7 @@ class Test<T> {
       return this.obj; 
     } 
 } 
-
 ```
-
 ```
 // Driver class to test above 
 class Main { 
@@ -338,19 +320,13 @@ class Main {
         System.out.println(sObj.getObject()); 
     } 
 }
-
 ```
-
 Output:
-
 ```
 15
 GeeksForGeeks
-
 ```
-
-2.  Generic Functions
-
+2. Generic Functions
 ```
 class Test { 
     // A Generic method example 
@@ -360,20 +336,15 @@ class Test {
     
     //...
 }
-
 ```
-
 ```
 public static void main(String[] args) { 
     genericDisplay(11); 
     genericDisplay("GeeksForGeeks"); 
     genericDisplay(1.0); 
 } 
-
 ```
-
 Output:
-
 ```
 java.lang.Integer = 11
 java.lang.String = GeeksForGeeks
