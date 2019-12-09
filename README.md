@@ -12,4 +12,4 @@ Learning purpose repository, from **Head First Design Pattern** Book mostly and 
 	
 
 - [Object Oriented Concept](https://www.javatpoint.com/java-oops-concepts)
-- [Java]()
+- [Java](https://github.com/harrisfz/baraja-design-pattern/blob/master/src/io/sago/baraja/java/README.md)
