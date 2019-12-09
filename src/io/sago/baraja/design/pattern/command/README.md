@@ -2,6 +2,7 @@
 **Command Pattern** - Encapsuletes a request as an object, thereby letting you parameterize other objects with different request, queue or logs request, and support undoable operations.
 
 **The Command Pattern Defined**
+![Command Pattern Class Diagram](https://github.com/harrisfz/baraja-design-pattern/blob/master/src/io/sago/baraja/design/pattern/command/Screen%20Shot%202019-12-09%20at%2014.27.10.png)
 
 
 **Problem** - Need to issue requests to objects without knowing anything about the operation being requested or the receiver of the request.
